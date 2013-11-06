@@ -1,9 +1,15 @@
 ArkSDK for node.js
 =======
+* [Installation] (#installation)
+* [Init] (#init)
+* [Get profile] (#profile)
+* [Profile picture] (#picture)
+* [Profile with validated pictures] (#pictures)
 
 With this library and a token you are ready to improve your apps with the best social information.
 
-How to install:
+<a name="installation" />
+__How to install:__
 
 ```js
 npm install ark-sdk
@@ -17,7 +23,8 @@ dependencies : {
   }
 ```
 
-Init with your token.
+<a name="init" />
+__Init with your token.__
 
 ```js
 arkSdk.init('YOUR-TOKEN-GOES-HERE', function (err, result) {
@@ -25,26 +32,27 @@ arkSdk.init('YOUR-TOKEN-GOES-HERE', function (err, result) {
 }
 ```
 
-Request a profile.
+<a name="profile" />
+__Request a profile.__
 
 ```js
 arkSdk.getProfileWithEmail('goofyahead@gmail.com', function (err, result) {
   console.log(result); // this will show you a valid profile or unknown
 }
 ```
-
-Get the best profile picture.
+<a name="picture" />
+__Get the best profile picture.__
 
 ```js
 arkSdk.getPictureFromProfile(result, function( err, result) {
 	console.log(result); // this method will iterate through the image to pick the best one. IT'S SLOW!
 });
 ```
-
-Get the profile with only working pictures.
+<a name="pictures" />
+__Get the profile with only working pictures.__
 
 ```js
 arkSdk.getProfileWithWorkingImages(result, function (err, result) {
-	console.log(result.pics); // All this pics are asured to work.
+	console.log(result.pics); // All this pics are asured to work. IT'S SLOW
 });
 ```
