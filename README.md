@@ -29,7 +29,7 @@ __Init with your token.__
 ```js
 arkSdk.init('YOUR-TOKEN-GOES-HERE', function (err, result) {
 	console.log(result); // this will return how many request are available on this token
-}
+});
 ```
 
 <a name="profile" />
@@ -38,7 +38,7 @@ __Request a profile.__
 ```js
 arkSdk.getProfileWithEmail('goofyahead@gmail.com', function (err, result) {
   console.log(result); // this will show you a valid profile or unknown
-}
+});
 ```
 <a name="picture" />
 __Get the best profile picture.__
